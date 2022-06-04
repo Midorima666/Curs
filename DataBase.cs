@@ -68,8 +68,7 @@ namespace optbaze
             else
             {
                 return null;
-            }
-            
+            } 
         }
     }
 }

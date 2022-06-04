@@ -44,18 +44,23 @@ namespace optbaze
             this.TCode = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.CBcompl = new System.Windows.Forms.CheckBox();
+            this.BChange = new System.Windows.Forms.Button();
+            this.CBstatus = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // Tgoods
             // 
             this.Tgoods.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Tgoods.Location = new System.Drawing.Point(145, 33);
+            this.Tgoods.Location = new System.Drawing.Point(207, 55);
+            this.Tgoods.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Tgoods.MaxLength = 16;
             this.Tgoods.Name = "Tgoods";
             this.Tgoods.PlaceholderText = "Товар";
-            this.Tgoods.Size = new System.Drawing.Size(85, 23);
+            this.Tgoods.Size = new System.Drawing.Size(120, 31);
             this.Tgoods.TabIndex = 5;
             // 
             // Bsourse
@@ -63,10 +68,11 @@ namespace optbaze
             this.Bsourse.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Bsourse.BackColor = System.Drawing.Color.LemonChiffon;
             this.Bsourse.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Bsourse.Location = new System.Drawing.Point(626, 26);
+            this.Bsourse.Location = new System.Drawing.Point(894, 43);
+            this.Bsourse.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Bsourse.Name = "Bsourse";
-            this.Bsourse.Size = new System.Drawing.Size(80, 36);
-            this.Bsourse.TabIndex = 8;
+            this.Bsourse.Size = new System.Drawing.Size(114, 60);
+            this.Bsourse.TabIndex = 1;
             this.Bsourse.Text = "Искать";
             this.Bsourse.UseVisualStyleBackColor = false;
             this.Bsourse.Click += new System.EventHandler(this.Bsourse_Click);
@@ -76,9 +82,10 @@ namespace optbaze
             this.Bback.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Bback.BackColor = System.Drawing.Color.LemonChiffon;
             this.Bback.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Bback.Location = new System.Drawing.Point(54, 398);
+            this.Bback.Location = new System.Drawing.Point(77, 663);
+            this.Bback.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Bback.Name = "Bback";
-            this.Bback.Size = new System.Drawing.Size(200, 44);
+            this.Bback.Size = new System.Drawing.Size(286, 73);
             this.Bback.TabIndex = 10;
             this.Bback.Text = "Назад";
             this.Bback.UseVisualStyleBackColor = false;
@@ -88,9 +95,10 @@ namespace optbaze
             // 
             this.dateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dateTimePicker1.CalendarTitleBackColor = System.Drawing.Color.Olive;
-            this.dateTimePicker1.Location = new System.Drawing.Point(339, 33);
+            this.dateTimePicker1.Location = new System.Drawing.Point(484, 55);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(125, 23);
+            this.dateTimePicker1.Size = new System.Drawing.Size(177, 31);
             this.dateTimePicker1.TabIndex = 11;
             this.dateTimePicker1.Value = new System.DateTime(2019, 1, 1, 0, 0, 0, 0);
             // 
@@ -98,20 +106,23 @@ namespace optbaze
             // 
             this.dateTimePicker2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dateTimePicker2.CalendarTitleBackColor = System.Drawing.Color.Olive;
-            this.dateTimePicker2.Location = new System.Drawing.Point(475, 33);
+            this.dateTimePicker2.Location = new System.Drawing.Point(679, 55);
+            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(125, 23);
+            this.dateTimePicker2.Size = new System.Drawing.Size(177, 31);
             this.dateTimePicker2.TabIndex = 12;
             this.dateTimePicker2.Value = new System.DateTime(2032, 5, 7, 0, 0, 0, 0);
+            this.dateTimePicker2.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
             // 
             // BAdd
             // 
             this.BAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.BAdd.BackColor = System.Drawing.Color.LemonChiffon;
             this.BAdd.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BAdd.Location = new System.Drawing.Point(506, 398);
+            this.BAdd.Location = new System.Drawing.Point(723, 663);
+            this.BAdd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BAdd.Name = "BAdd";
-            this.BAdd.Size = new System.Drawing.Size(200, 44);
+            this.BAdd.Size = new System.Drawing.Size(286, 73);
             this.BAdd.TabIndex = 13;
             this.BAdd.Text = "Добавить";
             this.BAdd.UseVisualStyleBackColor = false;
@@ -120,21 +131,23 @@ namespace optbaze
             // Tusername
             // 
             this.Tusername.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Tusername.Location = new System.Drawing.Point(54, 33);
+            this.Tusername.Location = new System.Drawing.Point(77, 55);
+            this.Tusername.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Tusername.MaxLength = 16;
             this.Tusername.Name = "Tusername";
             this.Tusername.PlaceholderText = "Сотрудник";
-            this.Tusername.Size = new System.Drawing.Size(85, 23);
+            this.Tusername.Size = new System.Drawing.Size(120, 31);
             this.Tusername.TabIndex = 14;
             // 
             // TCode
             // 
             this.TCode.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.TCode.Location = new System.Drawing.Point(236, 33);
+            this.TCode.Location = new System.Drawing.Point(337, 55);
+            this.TCode.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TCode.MaxLength = 16;
             this.TCode.Name = "TCode";
             this.TCode.PlaceholderText = "Договор";
-            this.TCode.Size = new System.Drawing.Size(85, 23);
+            this.TCode.Size = new System.Drawing.Size(120, 31);
             this.TCode.TabIndex = 15;
             // 
             // label1
@@ -143,9 +156,10 @@ namespace optbaze
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Tan;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(339, 15);
+            this.label1.Location = new System.Drawing.Point(494, 8);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(148, 15);
+            this.label1.Size = new System.Drawing.Size(231, 25);
             this.label1.TabIndex = 16;
             this.label1.Text = "Дата размещения (с, по)";
             // 
@@ -176,7 +190,8 @@ namespace optbaze
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.GridColor = System.Drawing.Color.DarkOliveGreen;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 68);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 113);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridView1.Name = "dataGridView1";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.LemonChiffon;
@@ -186,6 +201,7 @@ namespace optbaze
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridView1.RowHeadersWidth = 62;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.LemonChiffon;
             dataGridViewCellStyle4.NullValue = " — ";
@@ -193,39 +209,83 @@ namespace optbaze
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dataGridView1.Size = new System.Drawing.Size(752, 324);
+            this.dataGridView1.Size = new System.Drawing.Size(1074, 540);
             this.dataGridView1.TabIndex = 17;
             this.dataGridView1.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dataGridView1_CellBeginEdit);
             this.dataGridView1.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellEndEdit);
             this.dataGridView1.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridView1_DataError);
             this.dataGridView1.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_RowHeaderMouseDoubleClick);
             // 
-            // CBcompl
+            // BChange
             // 
-            this.CBcompl.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.CBcompl.BackColor = System.Drawing.Color.Tan;
-            this.CBcompl.Checked = true;
-            this.CBcompl.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.CBcompl.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.CBcompl.Location = new System.Drawing.Point(54, 7);
-            this.CBcompl.Name = "CBcompl";
-            this.CBcompl.Size = new System.Drawing.Size(118, 23);
-            this.CBcompl.TabIndex = 21;
-            this.CBcompl.Text = "Выполненные";
-            this.CBcompl.UseVisualStyleBackColor = false;
+            this.BChange.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.BChange.BackColor = System.Drawing.Color.LemonChiffon;
+            this.BChange.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.BChange.Location = new System.Drawing.Point(429, 663);
+            this.BChange.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.BChange.Name = "BChange";
+            this.BChange.Size = new System.Drawing.Size(286, 73);
+            this.BChange.TabIndex = 22;
+            this.BChange.Text = "Изменить";
+            this.BChange.UseVisualStyleBackColor = false;
+            this.BChange.Click += new System.EventHandler(this.BChange_Click);
+            // 
+            // CBstatus
+            // 
+            this.CBstatus.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.CBstatus.BackColor = System.Drawing.SystemColors.Window;
+            this.CBstatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CBstatus.FormattingEnabled = true;
+            this.CBstatus.Items.AddRange(new object[] {
+            "Любой",
+            "Принято",
+            "В процессе",
+            "Отправлено",
+            "Выполнено"});
+            this.CBstatus.Location = new System.Drawing.Point(207, 17);
+            this.CBstatus.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.CBstatus.Name = "CBstatus";
+            this.CBstatus.Size = new System.Drawing.Size(250, 33);
+            this.CBstatus.TabIndex = 27;
+            this.CBstatus.Tag = "";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Tan;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(13, 8);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(133, 25);
+            this.label2.TabIndex = 28;
+            this.label2.Text = "Статус заявки";
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panel1.BackColor = System.Drawing.Color.Tan;
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Enabled = false;
+            this.panel1.Location = new System.Drawing.Point(64, 17);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(804, 86);
+            this.panel1.TabIndex = 29;
             // 
             // Forder
             // 
             this.AcceptButton = this.Bsourse;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.BackgroundImage = global::optbaze.Properties.Resources.fon;
-            this.ClientSize = new System.Drawing.Size(752, 454);
-            this.Controls.Add(this.CBcompl);
+            this.ClientSize = new System.Drawing.Size(1074, 757);
+            this.Controls.Add(this.CBstatus);
+            this.Controls.Add(this.BChange);
             this.Controls.Add(this.BAdd);
             this.Controls.Add(this.Bback);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.TCode);
             this.Controls.Add(this.Tusername);
             this.Controls.Add(this.dateTimePicker2);
@@ -233,12 +293,16 @@ namespace optbaze
             this.Controls.Add(this.Bsourse);
             this.Controls.Add(this.Tgoods);
             this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(768, 493);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MinimumSize = new System.Drawing.Size(1088, 784);
             this.Name = "Forder";
             this.Text = "Оптовая база | Заказы";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Forder_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -255,7 +319,10 @@ namespace optbaze
         private System.Windows.Forms.TextBox TCode;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.CheckBox CBcompl;
+        private System.Windows.Forms.Button BChange;
+        private System.Windows.Forms.ComboBox CBstatus;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel1;
     }
     }
 

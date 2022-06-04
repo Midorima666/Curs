@@ -55,9 +55,10 @@ namespace optbaze
             // 
             this.BAdd.BackColor = System.Drawing.Color.LemonChiffon;
             this.BAdd.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BAdd.Location = new System.Drawing.Point(149, 300);
+            this.BAdd.Location = new System.Drawing.Point(213, 500);
+            this.BAdd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BAdd.Name = "BAdd";
-            this.BAdd.Size = new System.Drawing.Size(107, 44);
+            this.BAdd.Size = new System.Drawing.Size(153, 73);
             this.BAdd.TabIndex = 13;
             this.BAdd.Text = "Добавить";
             this.BAdd.UseVisualStyleBackColor = false;
@@ -67,9 +68,10 @@ namespace optbaze
             // 
             this.Ldate.AutoSize = true;
             this.Ldate.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Ldate.Location = new System.Drawing.Point(79, 11);
+            this.Ldate.Location = new System.Drawing.Point(99, 18);
+            this.Ldate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Ldate.Name = "Ldate";
-            this.Ldate.Size = new System.Drawing.Size(104, 15);
+            this.Ldate.Size = new System.Drawing.Size(162, 25);
             this.Ldate.TabIndex = 16;
             this.Ldate.Text = "Название товара";
             // 
@@ -77,19 +79,21 @@ namespace optbaze
             // 
             this.CBdelivery.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CBdelivery.FormattingEnabled = true;
-            this.CBdelivery.Location = new System.Drawing.Point(169, 73);
+            this.CBdelivery.Location = new System.Drawing.Point(227, 122);
+            this.CBdelivery.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CBdelivery.Name = "CBdelivery";
-            this.CBdelivery.Size = new System.Drawing.Size(54, 23);
+            this.CBdelivery.Size = new System.Drawing.Size(120, 33);
             this.CBdelivery.TabIndex = 17;
             // 
             // CBcharact
             // 
             this.CBcharact.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
             this.CBcharact.FormattingEnabled = true;
-            this.CBcharact.Location = new System.Drawing.Point(47, 117);
+            this.CBcharact.Location = new System.Drawing.Point(31, 195);
+            this.CBcharact.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CBcharact.MaxLength = 60;
             this.CBcharact.Name = "CBcharact";
-            this.CBcharact.Size = new System.Drawing.Size(176, 23);
+            this.CBcharact.Size = new System.Drawing.Size(316, 36);
             this.CBcharact.TabIndex = 18;
             // 
             // CBprovider
@@ -97,9 +101,10 @@ namespace optbaze
             this.CBprovider.BackColor = System.Drawing.SystemColors.Window;
             this.CBprovider.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CBprovider.FormattingEnabled = true;
-            this.CBprovider.Location = new System.Drawing.Point(47, 73);
+            this.CBprovider.Location = new System.Drawing.Point(31, 122);
+            this.CBprovider.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CBprovider.Name = "CBprovider";
-            this.CBprovider.Size = new System.Drawing.Size(116, 23);
+            this.CBprovider.Size = new System.Drawing.Size(188, 33);
             this.CBprovider.TabIndex = 20;
             this.CBprovider.SelectedIndexChanged += new System.EventHandler(this.CBprovider_SelectedIndexChanged);
             // 
@@ -107,9 +112,10 @@ namespace optbaze
             // 
             this.Lnubmer.AutoSize = true;
             this.Lnubmer.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Lnubmer.Location = new System.Drawing.Point(79, 55);
+            this.Lnubmer.Location = new System.Drawing.Point(99, 92);
+            this.Lnubmer.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lnubmer.Name = "Lnubmer";
-            this.Lnubmer.Size = new System.Drawing.Size(73, 15);
+            this.Lnubmer.Size = new System.Drawing.Size(111, 25);
             this.Lnubmer.TabIndex = 21;
             this.Lnubmer.Text = "Поставщик";
             // 
@@ -117,9 +123,10 @@ namespace optbaze
             // 
             this.Lgoods.AutoSize = true;
             this.Lgoods.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Lgoods.Location = new System.Drawing.Point(163, 55);
+            this.Lgoods.Location = new System.Drawing.Point(219, 92);
+            this.Lgoods.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lgoods.Name = "Lgoods";
-            this.Lgoods.Size = new System.Drawing.Size(60, 15);
+            this.Lgoods.Size = new System.Drawing.Size(94, 25);
             this.Lgoods.TabIndex = 22;
             this.Lgoods.Text = "Поставка";
             // 
@@ -127,9 +134,10 @@ namespace optbaze
             // 
             this.Lstaff.AutoSize = true;
             this.Lstaff.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Lstaff.Location = new System.Drawing.Point(79, 99);
+            this.Lstaff.Location = new System.Drawing.Point(99, 165);
+            this.Lstaff.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lstaff.Name = "Lstaff";
-            this.Lstaff.Size = new System.Drawing.Size(102, 15);
+            this.Lstaff.Size = new System.Drawing.Size(154, 25);
             this.Lstaff.TabIndex = 23;
             this.Lstaff.Text = "Характеристики";
             // 
@@ -137,9 +145,10 @@ namespace optbaze
             // 
             this.BCancel.BackColor = System.Drawing.Color.LemonChiffon;
             this.BCancel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BCancel.Location = new System.Drawing.Point(12, 300);
+            this.BCancel.Location = new System.Drawing.Point(17, 500);
+            this.BCancel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BCancel.Name = "BCancel";
-            this.BCancel.Size = new System.Drawing.Size(107, 44);
+            this.BCancel.Size = new System.Drawing.Size(153, 73);
             this.BCancel.TabIndex = 24;
             this.BCancel.Text = "Отмена";
             this.BCancel.UseVisualStyleBackColor = false;
@@ -149,10 +158,11 @@ namespace optbaze
             // 
             this.CBdescript.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
             this.CBdescript.FormattingEnabled = true;
-            this.CBdescript.Location = new System.Drawing.Point(47, 161);
+            this.CBdescript.Location = new System.Drawing.Point(31, 268);
+            this.CBdescript.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CBdescript.MaxLength = 60;
             this.CBdescript.Name = "CBdescript";
-            this.CBdescript.Size = new System.Drawing.Size(176, 23);
+            this.CBdescript.Size = new System.Drawing.Size(316, 36);
             this.CBdescript.TabIndex = 25;
             // 
             // CBamount2
@@ -165,19 +175,21 @@ namespace optbaze
             "м",
             "см",
             "л"});
-            this.CBamount2.Location = new System.Drawing.Point(138, 249);
+            this.CBamount2.Location = new System.Drawing.Point(227, 415);
+            this.CBamount2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CBamount2.MaxLength = 10;
             this.CBamount2.Name = "CBamount2";
-            this.CBamount2.Size = new System.Drawing.Size(85, 23);
+            this.CBamount2.Size = new System.Drawing.Size(120, 33);
             this.CBamount2.TabIndex = 26;
             // 
             // Lamount
             // 
             this.Lamount.AutoSize = true;
             this.Lamount.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Lamount.Location = new System.Drawing.Point(79, 231);
+            this.Lamount.Location = new System.Drawing.Point(99, 385);
+            this.Lamount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lamount.Name = "Lamount";
-            this.Lamount.Size = new System.Drawing.Size(117, 15);
+            this.Lamount.Size = new System.Drawing.Size(181, 25);
             this.Lamount.TabIndex = 27;
             this.Lamount.Text = "Количество товара";
             // 
@@ -185,9 +197,10 @@ namespace optbaze
             // 
             this.Ladress.AutoSize = true;
             this.Ladress.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Ladress.Location = new System.Drawing.Point(79, 143);
+            this.Ladress.Location = new System.Drawing.Point(99, 238);
+            this.Ladress.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Ladress.Name = "Ladress";
-            this.Ladress.Size = new System.Drawing.Size(65, 15);
+            this.Ladress.Size = new System.Drawing.Size(99, 25);
             this.Ladress.TabIndex = 28;
             this.Ladress.Text = "Описание";
             // 
@@ -195,19 +208,21 @@ namespace optbaze
             // 
             this.CBgoods.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
             this.CBgoods.FormattingEnabled = true;
-            this.CBgoods.Location = new System.Drawing.Point(47, 29);
+            this.CBgoods.Location = new System.Drawing.Point(31, 48);
+            this.CBgoods.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CBgoods.MaxLength = 40;
             this.CBgoods.Name = "CBgoods";
-            this.CBgoods.Size = new System.Drawing.Size(176, 23);
+            this.CBgoods.Size = new System.Drawing.Size(316, 36);
             this.CBgoods.TabIndex = 29;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(79, 187);
+            this.label1.Location = new System.Drawing.Point(90, 312);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 15);
+            this.label1.Size = new System.Drawing.Size(139, 25);
             this.label1.TabIndex = 31;
             this.label1.Text = "Цена закупки,";
             // 
@@ -215,9 +230,10 @@ namespace optbaze
             // 
             this.CBcost1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
             this.CBcost1.FormattingEnabled = true;
-            this.CBcost1.Location = new System.Drawing.Point(47, 205);
+            this.CBcost1.Location = new System.Drawing.Point(31, 342);
+            this.CBcost1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CBcost1.Name = "CBcost1";
-            this.CBcost1.Size = new System.Drawing.Size(85, 23);
+            this.CBcost1.Size = new System.Drawing.Size(142, 36);
             this.CBcost1.TabIndex = 30;
             this.CBcost1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.amount_KeyPress);
             // 
@@ -225,9 +241,10 @@ namespace optbaze
             // 
             this.CBcost2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
             this.CBcost2.FormattingEnabled = true;
-            this.CBcost2.Location = new System.Drawing.Point(138, 205);
+            this.CBcost2.Location = new System.Drawing.Point(183, 342);
+            this.CBcost2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CBcost2.Name = "CBcost2";
-            this.CBcost2.Size = new System.Drawing.Size(85, 23);
+            this.CBcost2.Size = new System.Drawing.Size(164, 36);
             this.CBcost2.TabIndex = 32;
             this.CBcost2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.amount_KeyPress);
             // 
@@ -235,9 +252,10 @@ namespace optbaze
             // 
             this.CBamount1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
             this.CBamount1.FormattingEnabled = true;
-            this.CBamount1.Location = new System.Drawing.Point(47, 249);
+            this.CBamount1.Location = new System.Drawing.Point(31, 415);
+            this.CBamount1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CBamount1.Name = "CBamount1";
-            this.CBamount1.Size = new System.Drawing.Size(85, 23);
+            this.CBamount1.Size = new System.Drawing.Size(188, 36);
             this.CBamount1.TabIndex = 33;
             this.CBamount1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.amount_KeyPress);
             // 
@@ -245,19 +263,20 @@ namespace optbaze
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(164, 187);
+            this.label2.Location = new System.Drawing.Point(220, 312);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 15);
+            this.label2.Size = new System.Drawing.Size(92, 25);
             this.label2.TabIndex = 34;
             this.label2.Text = "продажи";
             // 
             // FstockAddGoods
             // 
             this.AcceptButton = this.BAdd;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Tan;
-            this.ClientSize = new System.Drawing.Size(268, 356);
+            this.ClientSize = new System.Drawing.Size(374, 565);
             this.ControlBox = false;
             this.Controls.Add(this.label2);
             this.Controls.Add(this.CBamount1);
@@ -279,8 +298,9 @@ namespace optbaze
             this.Controls.Add(this.Ldate);
             this.Controls.Add(this.BAdd);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(284, 395);
-            this.MinimumSize = new System.Drawing.Size(284, 395);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MaximumSize = new System.Drawing.Size(396, 621);
+            this.MinimumSize = new System.Drawing.Size(396, 621);
             this.Name = "FstockAddGoods";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;

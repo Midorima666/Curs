@@ -33,33 +33,36 @@ namespace optbaze
                 var totalWidth = dataGridView1.Columns.GetColumnsWidth(states) + dataGridView1.RowHeadersWidth;
                 this.Size = new Size(totalWidth, 493);
                 this.MinimumSize = new Size(totalWidth, 493);
+                CBstatus.SelectedIndex = 0;
             }
 
             public void GetList()
             {
-                dataGridView1.DataSource = dataBase.sqlShow("SELECT Паспорт, Фамилия, Имя, Отчество, Должность, Адрес, Телефон, email FROM Сотрудник");
+                dataGridView1.DataSource = dataBase.sqlShow("SELECT Паспорт, Фамилия, Имя, Отчество, Должность, Адрес, Телефон, email, Статус FROM Сотрудник");
             }
 
             private void Bsourse_Click(object sender, EventArgs e)
             {
-                string sourseSting = " WHERE Паспорт=КодСотрудника";
-                if (Tfio.Text != "")
-                {
-                    sourseSting += " AND Фамилия + Имя + Отчество LIKE '%" + Tfio.Text + "%'";
-                }
+                string sourseSting = " WHERE Фамилия + Имя + Отчество LIKE '%" + Tfio.Text + "%'";
+
                 if (Tpass.Text != "")
                 {
                     sourseSting += " AND Паспорт LIKE '" + Tpass.Text + "%'";
                 }
                 if (Torder.Text != "")
                 {
-                    sourseSting += " AND Код = '" + Torder.Text + "'";
+                    sourseSting += " AND Код = '" + Torder.Text + "' AND Паспорт=КодСотрудника";
                 }
                 if (CBpost.Text != "")
                 {
                     sourseSting += " AND Должность LIKE '%" + CBpost.Text + "%'";
                 }
-                dataGridView1.DataSource = dataBase.sqlShow("SELECT DISTINCT Паспорт, Фамилия, Имя, Отчество, Должность, Адрес, Телефон, email FROM Сотрудник, ЗаявкаНаПродажу" + sourseSting);
+                if (CBstatus.SelectedIndex != 0)
+                {
+                    sourseSting += " AND Сотрудник.Статус = '" + CBstatus.Text.ToString() + "'";
+                }
+                dataGridView1.DataSource = dataBase.sqlShow("SELECT DISTINCT Паспорт, Фамилия, Имя, Отчество, Должность, Адрес, Телефон, email, Сотрудник.Статус FROM Сотрудник, ЗаявкаНаПродажу" + sourseSting);
+                this.CBpost.SelectedIndex = -1;
             }
 
             private void BAddStaff_Click(object sender, EventArgs e)
@@ -111,7 +114,7 @@ namespace optbaze
         {
             if (post == "Администратор")
             {
-                FstaffUpdateStaff fstaffUpdateStaff = new FstaffUpdateStaff();
+                FstaffUpdateStaff fstaffUpdateStaff = new FstaffUpdateStaff(fmenu);
                 fstaffUpdateStaff.ShowDialog();
                 GetList();
             }

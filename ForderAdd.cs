@@ -17,24 +17,25 @@ namespace optbaze
 
         public ForderAdd()
         {
-        InitializeComponent();
-        string selectSting = "Select distinct * from Договор";
-        this.CBnubmer.DataSource = dataBase.sqlShow(selectSting);
-        this.CBnubmer.DisplayMember = "Номер + Вид"; // столбец для отображения
-        this.CBnubmer.ValueMember = "Номер"; //столбец с id
-        this.CBnubmer.SelectedIndex = -1;
+            InitializeComponent();
+            string selectSting = "Select distinct * from Договор WHERE Вид = 'Продажа'";
+            this.CBnubmer.DataSource = dataBase.sqlShow(selectSting);
+            this.CBnubmer.DisplayMember = "Номер"; // столбец для отображения
+            this.CBnubmer.ValueMember = "Номер"; //столбец с id
+            this.CBnubmer.SelectedIndex = -1;
 
-        selectSting = "Select * from Товар";
-        this.CBgoods.DataSource = dataBase.sqlShow(selectSting);
-        this.CBgoods.DisplayMember = "Наименование"; // столбец для отображения
-        this.CBgoods.ValueMember = "Код"; //столбец с id
-        this.CBgoods.SelectedIndex = -1;
+            selectSting = "Select Код, (Код + ' ' + Наименование + ' ' + CONVERT(varchar(10), ЦенаПродажи)) as 'Имя' from Товар";
+            this.CBgoods.DataSource = dataBase.sqlShow(selectSting);
+            this.CBgoods.DisplayMember = "Имя"; // столбец для отображения
+            this.CBgoods.ValueMember = "Код"; //столбец с id
+            this.CBgoods.SelectedIndex = -1;
 
-        selectSting = "Select distinct Паспорт, Фамилия + Имя + Отчество As ФИО from Сотрудник";
-        this.CBstaff.DataSource = dataBase.sqlShow(selectSting);
-        this.CBstaff.DisplayMember = "ФИО"; // столбец для отображения
-        this.CBstaff.ValueMember = "Паспорт"; //столбец с id
-        this.CBstaff.SelectedIndex = -1;
+            selectSting = "Select distinct Паспорт, Фамилия + ' ' + Имя + ' ' + Отчество As ФИО from Сотрудник WHERE Должность = 'Менеджер' AND Статус = 'Работает'";
+            this.CBstaff.DataSource = dataBase.sqlShow(selectSting);
+            this.CBstaff.DisplayMember = "ФИО"; // столбец для отображения
+            this.CBstaff.ValueMember = "Паспорт"; //столбец с id
+            this.CBstaff.SelectedIndex = -1;
+             dateTimePicker1.MaxDate = DateTime.Today;
         }
 
 
@@ -79,7 +80,7 @@ namespace optbaze
             {
                 last = Convert.ToInt32(dataBase.sqlToString("SELECT TOP 1 Код FROM ЗаявкаНаПродажу ORDER BY Код DESC")) + 1;
                 dataBase.closeConnection();
-                updateString = "INSERT INTO ЗаявкаНаПродажу VALUES(" + last + ", CAST('" + dateTimePicker1.Text.Replace(".", "-") + "' as date), '" + CBnubmer.SelectedValue.ToString() + "', '" + CBgoods.SelectedValue.ToString() + "', '" + CBstaff.SelectedValue.ToString() + "' , DEFAULT , '" + CBadress.Text + "' , DEFAULT , " + Convert.ToInt32(CBamount.Text) + ")";
+                updateString = "INSERT INTO ЗаявкаНаПродажу VALUES(" + last + ", CAST('" + dateTimePicker1.Text.Replace(".", "-") + "' as date), '" + CBnubmer.SelectedValue.ToString() + "', '" + CBgoods.SelectedValue.ToString() + "', '" + CBstaff.SelectedValue.ToString() + "', NULL, '" + CBadress.Text + "' , NULL, " + Convert.ToInt32(CBamount.Text) + ", DEFAULT, DEFAULT)";
                 dataBase.sqlUpdate(updateString);
                 this.Close();
             }

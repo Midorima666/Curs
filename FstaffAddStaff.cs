@@ -68,7 +68,7 @@ namespace optbaze
                 {
                     updateString += ", NULL";
                 }
-                updateString += ")";
+                updateString += ", NULL, DEFAULT)";
 
                 dataBase.closeConnection();
                 dataBase.sqlUpdate(updateString);

@@ -10,6 +10,9 @@
     <Compile Update="ForderAdd.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="ForderChange.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FpartnerAddPact.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -23,6 +26,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="FstaffUpdateStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Fstatistics.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Fstock.cs">

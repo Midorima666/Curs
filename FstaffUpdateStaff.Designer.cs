@@ -49,15 +49,18 @@ namespace optbaze
             this.TBpass = new System.Windows.Forms.TextBox();
             this.TBemail = new System.Windows.Forms.TextBox();
             this.TBphone = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.CBstatus = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // BAdd
             // 
             this.BAdd.BackColor = System.Drawing.Color.LemonChiffon;
             this.BAdd.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BAdd.Location = new System.Drawing.Point(149, 300);
+            this.BAdd.Location = new System.Drawing.Point(208, 478);
+            this.BAdd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BAdd.Name = "BAdd";
-            this.BAdd.Size = new System.Drawing.Size(107, 44);
+            this.BAdd.Size = new System.Drawing.Size(153, 73);
             this.BAdd.TabIndex = 13;
             this.BAdd.Text = "Изменить";
             this.BAdd.UseVisualStyleBackColor = false;
@@ -67,9 +70,10 @@ namespace optbaze
             // 
             this.L1.AutoSize = true;
             this.L1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.L1.Location = new System.Drawing.Point(79, 11);
+            this.L1.Location = new System.Drawing.Point(113, 18);
+            this.L1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.L1.Name = "L1";
-            this.L1.Size = new System.Drawing.Size(54, 15);
+            this.L1.Size = new System.Drawing.Size(86, 25);
             this.L1.TabIndex = 16;
             this.L1.Text = "Паспорт";
             // 
@@ -77,20 +81,22 @@ namespace optbaze
             // 
             this.CBpatronymic.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
             this.CBpatronymic.FormattingEnabled = true;
-            this.CBpatronymic.Location = new System.Drawing.Point(47, 117);
+            this.CBpatronymic.Location = new System.Drawing.Point(67, 195);
+            this.CBpatronymic.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CBpatronymic.MaxLength = 20;
             this.CBpatronymic.Name = "CBpatronymic";
-            this.CBpatronymic.Size = new System.Drawing.Size(176, 23);
+            this.CBpatronymic.Size = new System.Drawing.Size(250, 36);
             this.CBpatronymic.TabIndex = 17;
             // 
             // CBadress
             // 
             this.CBadress.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
             this.CBadress.FormattingEnabled = true;
-            this.CBadress.Location = new System.Drawing.Point(47, 161);
+            this.CBadress.Location = new System.Drawing.Point(67, 268);
+            this.CBadress.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CBadress.MaxLength = 60;
             this.CBadress.Name = "CBadress";
-            this.CBadress.Size = new System.Drawing.Size(176, 23);
+            this.CBadress.Size = new System.Drawing.Size(250, 36);
             this.CBadress.TabIndex = 18;
             // 
             // CBsecondName
@@ -98,19 +104,21 @@ namespace optbaze
             this.CBsecondName.BackColor = System.Drawing.SystemColors.Window;
             this.CBsecondName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
             this.CBsecondName.FormattingEnabled = true;
-            this.CBsecondName.Location = new System.Drawing.Point(129, 73);
+            this.CBsecondName.Location = new System.Drawing.Point(184, 122);
+            this.CBsecondName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CBsecondName.MaxLength = 20;
             this.CBsecondName.Name = "CBsecondName";
-            this.CBsecondName.Size = new System.Drawing.Size(94, 23);
+            this.CBsecondName.Size = new System.Drawing.Size(133, 36);
             this.CBsecondName.TabIndex = 20;
             // 
             // L2
             // 
             this.L2.AutoSize = true;
             this.L2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.L2.Location = new System.Drawing.Point(79, 55);
+            this.L2.Location = new System.Drawing.Point(113, 92);
+            this.L2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.L2.Name = "L2";
-            this.L2.Size = new System.Drawing.Size(32, 15);
+            this.L2.Size = new System.Drawing.Size(50, 25);
             this.L2.TabIndex = 21;
             this.L2.Text = "Имя";
             // 
@@ -118,9 +126,10 @@ namespace optbaze
             // 
             this.L3.AutoSize = true;
             this.L3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.L3.Location = new System.Drawing.Point(79, 99);
+            this.L3.Location = new System.Drawing.Point(113, 165);
+            this.L3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.L3.Name = "L3";
-            this.L3.Size = new System.Drawing.Size(60, 15);
+            this.L3.Size = new System.Drawing.Size(93, 25);
             this.L3.TabIndex = 22;
             this.L3.Text = "Отчество";
             // 
@@ -128,9 +137,10 @@ namespace optbaze
             // 
             this.L4.AutoSize = true;
             this.L4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.L4.Location = new System.Drawing.Point(79, 143);
+            this.L4.Location = new System.Drawing.Point(113, 238);
+            this.L4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.L4.Name = "L4";
-            this.L4.Size = new System.Drawing.Size(42, 15);
+            this.L4.Size = new System.Drawing.Size(67, 25);
             this.L4.TabIndex = 23;
             this.L4.Text = "Адрес";
             // 
@@ -138,9 +148,10 @@ namespace optbaze
             // 
             this.BCancel.BackColor = System.Drawing.Color.LemonChiffon;
             this.BCancel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BCancel.Location = new System.Drawing.Point(12, 300);
+            this.BCancel.Location = new System.Drawing.Point(13, 478);
+            this.BCancel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BCancel.Name = "BCancel";
-            this.BCancel.Size = new System.Drawing.Size(107, 44);
+            this.BCancel.Size = new System.Drawing.Size(153, 73);
             this.BCancel.TabIndex = 24;
             this.BCancel.Text = "Отмена";
             this.BCancel.UseVisualStyleBackColor = false;
@@ -149,19 +160,21 @@ namespace optbaze
             // CBpost
             // 
             this.CBpost.FormattingEnabled = true;
-            this.CBpost.Location = new System.Drawing.Point(147, 29);
+            this.CBpost.Location = new System.Drawing.Point(210, 48);
+            this.CBpost.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CBpost.MaxLength = 20;
             this.CBpost.Name = "CBpost";
-            this.CBpost.Size = new System.Drawing.Size(76, 23);
+            this.CBpost.Size = new System.Drawing.Size(107, 33);
             this.CBpost.TabIndex = 25;
             // 
             // L5
             // 
             this.L5.AutoSize = true;
             this.L5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.L5.Location = new System.Drawing.Point(151, 11);
+            this.L5.Location = new System.Drawing.Point(216, 18);
+            this.L5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.L5.Name = "L5";
-            this.L5.Size = new System.Drawing.Size(72, 15);
+            this.L5.Size = new System.Drawing.Size(112, 25);
             this.L5.TabIndex = 28;
             this.L5.Text = "Должность";
             // 
@@ -169,10 +182,11 @@ namespace optbaze
             // 
             this.CBpass.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CBpass.FormattingEnabled = true;
-            this.CBpass.Location = new System.Drawing.Point(47, 29);
+            this.CBpass.Location = new System.Drawing.Point(67, 48);
+            this.CBpass.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CBpass.MaxLength = 20;
             this.CBpass.Name = "CBpass";
-            this.CBpass.Size = new System.Drawing.Size(94, 23);
+            this.CBpass.Size = new System.Drawing.Size(133, 33);
             this.CBpass.TabIndex = 29;
             this.CBpass.SelectedIndexChanged += new System.EventHandler(this.CBpass_SelectedIndexChanged);
             this.CBpass.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.amountspace_KeyPress);
@@ -181,9 +195,10 @@ namespace optbaze
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(79, 187);
+            this.label1.Location = new System.Drawing.Point(113, 312);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 15);
+            this.label1.Size = new System.Drawing.Size(89, 25);
             this.label1.TabIndex = 30;
             this.label1.Text = "Телефон";
             // 
@@ -191,9 +206,10 @@ namespace optbaze
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(79, 230);
+            this.label2.Location = new System.Drawing.Point(113, 383);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(36, 15);
+            this.label2.Size = new System.Drawing.Size(58, 25);
             this.label2.TabIndex = 32;
             this.label2.Text = "Email";
             // 
@@ -201,19 +217,21 @@ namespace optbaze
             // 
             this.CBname.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
             this.CBname.FormattingEnabled = true;
-            this.CBname.Location = new System.Drawing.Point(47, 73);
+            this.CBname.Location = new System.Drawing.Point(67, 122);
+            this.CBname.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CBname.MaxLength = 20;
             this.CBname.Name = "CBname";
-            this.CBname.Size = new System.Drawing.Size(76, 23);
+            this.CBname.Size = new System.Drawing.Size(107, 36);
             this.CBname.TabIndex = 34;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(151, 55);
+            this.label3.Location = new System.Drawing.Point(216, 92);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 15);
+            this.label3.Size = new System.Drawing.Size(94, 25);
             this.label3.TabIndex = 35;
             this.label3.Text = "Фамилия";
             // 
@@ -221,49 +239,80 @@ namespace optbaze
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(159, 231);
+            this.label4.Location = new System.Drawing.Point(227, 385);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(50, 15);
+            this.label4.Size = new System.Drawing.Size(79, 25);
             this.label4.TabIndex = 36;
             this.label4.Text = "Пароль";
             // 
             // TBpass
             // 
-            this.TBpass.Location = new System.Drawing.Point(159, 248);
+            this.TBpass.Location = new System.Drawing.Point(227, 413);
+            this.TBpass.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TBpass.MaxLength = 20;
             this.TBpass.Name = "TBpass";
             this.TBpass.PasswordChar = '*';
             this.TBpass.PlaceholderText = "*******";
-            this.TBpass.Size = new System.Drawing.Size(64, 23);
+            this.TBpass.Size = new System.Drawing.Size(90, 31);
             this.TBpass.TabIndex = 38;
             // 
             // TBemail
             // 
-            this.TBemail.Location = new System.Drawing.Point(47, 248);
+            this.TBemail.Location = new System.Drawing.Point(67, 413);
+            this.TBemail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TBemail.MaxLength = 20;
             this.TBemail.Name = "TBemail";
             this.TBemail.PlaceholderText = "Необязательно";
-            this.TBemail.Size = new System.Drawing.Size(106, 23);
+            this.TBemail.Size = new System.Drawing.Size(150, 31);
             this.TBemail.TabIndex = 39;
             // 
             // TBphone
             // 
-            this.TBphone.Location = new System.Drawing.Point(47, 205);
+            this.TBphone.Location = new System.Drawing.Point(67, 342);
+            this.TBphone.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TBphone.MaxLength = 20;
             this.TBphone.Name = "TBphone";
             this.TBphone.PlaceholderText = "Необязательно";
-            this.TBphone.Size = new System.Drawing.Size(176, 23);
+            this.TBphone.Size = new System.Drawing.Size(139, 31);
             this.TBphone.TabIndex = 40;
             this.TBphone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.amountplus_KeyPress);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.Location = new System.Drawing.Point(216, 312);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(68, 25);
+            this.label5.TabIndex = 42;
+            this.label5.Text = "Статус";
+            // 
+            // CBstatus
+            // 
+            this.CBstatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CBstatus.FormattingEnabled = true;
+            this.CBstatus.Items.AddRange(new object[] {
+            "Уволен",
+            "Работает"});
+            this.CBstatus.Location = new System.Drawing.Point(210, 342);
+            this.CBstatus.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.CBstatus.MaxLength = 20;
+            this.CBstatus.Name = "CBstatus";
+            this.CBstatus.Size = new System.Drawing.Size(107, 33);
+            this.CBstatus.TabIndex = 41;
             // 
             // FstaffUpdateStaff
             // 
             this.AcceptButton = this.BAdd;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Tan;
-            this.ClientSize = new System.Drawing.Size(268, 356);
+            this.ClientSize = new System.Drawing.Size(374, 565);
             this.ControlBox = false;
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.CBstatus);
             this.Controls.Add(this.TBphone);
             this.Controls.Add(this.TBemail);
             this.Controls.Add(this.TBpass);
@@ -284,8 +333,9 @@ namespace optbaze
             this.Controls.Add(this.CBpatronymic);
             this.Controls.Add(this.L1);
             this.Controls.Add(this.BAdd);
-            this.MaximumSize = new System.Drawing.Size(284, 395);
-            this.MinimumSize = new System.Drawing.Size(284, 395);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MaximumSize = new System.Drawing.Size(396, 621);
+            this.MinimumSize = new System.Drawing.Size(396, 621);
             this.Name = "FstaffUpdateStaff";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
@@ -318,6 +368,8 @@ namespace optbaze
             private System.Windows.Forms.TextBox TBpass;
             private System.Windows.Forms.TextBox TBemail;
             private System.Windows.Forms.TextBox TBphone;
-        }
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox CBstatus;
+    }
     }
 

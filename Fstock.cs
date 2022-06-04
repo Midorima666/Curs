@@ -27,7 +27,8 @@ namespace optbaze
                 var totalWidth = dataGridView1.Columns.GetColumnsWidth(states) + dataGridView1.RowHeadersWidth + 100;
                 this.Size = new Size(totalWidth, 493);
                 this.MinimumSize = new Size(totalWidth, 493);
-            }
+                dateTimePicker2.MaxDate = DateTime.Today;
+        }
 
             public void GetList()
             {
@@ -59,7 +60,7 @@ namespace optbaze
 
             private void dataGridView1_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
             {
-                if (e.ColumnIndex != 5 && e.ColumnIndex != 6 && e.ColumnIndex != 7 && post != "Менеджер")
+                if ((e.ColumnIndex != 5 && e.ColumnIndex != 6 && e.ColumnIndex != 7) || post != "Менеджер")
                 {
                     e.Cancel = true;
                 }
@@ -137,6 +138,11 @@ namespace optbaze
         private void dataGridView1_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
             MessageBox.Show("Неверный тип данных");
+        }
+
+        private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
+        {
+            dateTimePicker1.MaxDate = dateTimePicker2.Value;
         }
     }
 }

@@ -22,7 +22,7 @@ namespace optbaze
             CBprovider.DisplayMember = "Название"; // столбец для отображения
             CBprovider.ValueMember = "Код"; //столбец с id
             CBprovider.SelectedIndex = -1;
-
+            dateTimePicker1.MaxDate = DateTime.Today;
         }
 
 

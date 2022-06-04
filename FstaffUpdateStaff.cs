@@ -13,17 +13,19 @@ namespace optbaze
 {
     public partial class FstaffUpdateStaff : Form
     {
-            DataBase dataBase = new DataBase();
-            public FstaffUpdateStaff()
+        DataBase dataBase = new DataBase();
+        Fmenu fmenu;
+        public FstaffUpdateStaff(Fmenu menu)
             {
                 InitializeComponent();
+                fmenu = menu;
                 string selectSting = "SELECT DISTINCT Должность from Сотрудник";
                 this.CBpost.DataSource = dataBase.sqlShow(selectSting);
                 this.CBpost.DisplayMember = "Должность"; // столбец для отображения
                 this.CBpost.ValueMember = "Должность"; //столбец с id
                 this.CBpost.SelectedIndex = -1;
 
-                selectSting = "SELECT Паспорт from Сотрудник";
+                selectSting = "SELECT Паспорт from Сотрудник Where Паспорт != '"+ fmenu.pass + "'";
                 this.CBpass.DataSource = dataBase.sqlShow(selectSting);
                 this.CBpass.DisplayMember = "Паспорт"; // столбец для отображения
                 this.CBpass.ValueMember = "Паспорт"; //столбец с id
@@ -63,7 +65,7 @@ namespace optbaze
             private void BAdd_Click(object sender, EventArgs e)
             {
                 string updateString = "";
-                if ((CBpass.Text == "") || (CBsecondName.Text == "") || (CBname.Text == "") || (CBpatronymic.Text == "") || (CBpost.Text == "") || (CBadress.Text == ""))
+                if ((CBpass.Text == "") || (CBsecondName.Text == "") || (CBname.Text == "") || (CBpatronymic.Text == "") || (CBpost.Text == "") || (CBadress.Text == "") || (CBstatus.Text == ""))
                 {
                     MessageBox.Show("Ошибка! Неккоретные данные. \n Попробуйте ещё раз");
                 }
@@ -94,7 +96,7 @@ namespace optbaze
                     {
                         updateString += ", password = NULL";
                     }
-                    updateString += " WHERE Паспорт = '" + CBpass.Text + "'";
+                    updateString += ", Статус = '" + CBstatus.Text + "'" + " WHERE Паспорт = '" + CBpass.Text + "'";
                     dataBase.sqlUpdate(updateString);
                     this.Close();
                 }

@@ -14,6 +14,7 @@ namespace optbaze
     {
         DataBase dataBase = new DataBase();
         public string post = "";
+        public string pass = "";
         public Fmenu()
         {
             InitializeComponent();
@@ -53,6 +54,19 @@ namespace optbaze
             }
         }
 
+        private void Bstatistics_Click(object sender, EventArgs e)
+        {
+            if (post != "")
+            {
+                Fstatistics fstatistics = new Fstatistics(this);
+                this.Visible = false;
+                fstatistics.Show();
+            }
+            else
+            {
+                MessageBox.Show("Нет доступа. Авторизируйтесь");
+            }
+        }
         private void Fmenu_FormClosed(object sender, FormClosedEventArgs e)
         {
              Application.Exit();
@@ -61,35 +75,55 @@ namespace optbaze
         private void Benter_Click(object sender, EventArgs e)
         {
             post = "";
-            if ((Tusername.Text == "") || (Tpassword.Text == ""))
+            if (Benter.Text == "Войти")
             {
-                MessageBox.Show("Введите логин и пароль");
-            }
-            else
-            {
-                if (dataBase.sqlToString("SELECT email FROM Сотрудник WHERE email = '" + Tusername.Text + "'") == null)
+                if ((Tusername.Text == "") || (Tpassword.Text == ""))
                 {
-                    MessageBox.Show("Данного пользователя не существует");
+                    MessageBox.Show("Введите логин и пароль");
                 }
                 else
                 {
-                    if ((dataBase.sqlToString("SELECT password FROM Сотрудник WHERE email = '" + Tusername.Text + "'") == ""))
+                    if (dataBase.sqlToString("SELECT email FROM Сотрудник WHERE email = '" + Tusername.Text + "'") == null)
                     {
-                        MessageBox.Show("Данный пользователь не зарегестрирован!\nОбратитесь к администратору");
+                        MessageBox.Show("Данного пользователя не существует");
                     }
                     else
                     {
-                        if ((dataBase.sqlToString("SELECT password FROM Сотрудник WHERE email = '" + Tusername.Text + "'") != Tpassword.Text))
+                        if ((dataBase.sqlToString("SELECT password FROM Сотрудник WHERE email = '" + Tusername.Text + "'") == ""))
                         {
-                            MessageBox.Show("Неверный пароль!");
+                            MessageBox.Show("Данный пользователь не зарегестрирован!\nОбратитесь к администратору");
                         }
                         else
                         {
-                            MessageBox.Show("Добро пожаловать, " + dataBase.sqlToString("SELECT Имя + Отчество FROM Сотрудник WHERE email = '" + Tusername.Text + "'"));
-                            post = dataBase.sqlToString("SELECT Должность FROM Сотрудник WHERE email = '" + Tusername.Text + "'");
+                            if ((dataBase.sqlToString("SELECT password FROM Сотрудник WHERE email = '" + Tusername.Text + "'") != Tpassword.Text))
+                            {
+                                MessageBox.Show("Неверный пароль!");
+                            }
+                            else
+                            {
+                                if (dataBase.sqlToString("SELECT Статус FROM Сотрудник WHERE email = '" + Tusername.Text + "'") == "Уволен")
+                                {
+                                    MessageBox.Show("Вы уволены!");
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Добро пожаловать, " + dataBase.sqlToString("SELECT Имя + ' ' + Отчество FROM Сотрудник WHERE email = '" + Tusername.Text + "'"));
+                                    post = dataBase.sqlToString("SELECT Должность FROM Сотрудник WHERE email = '" + Tusername.Text + "'");
+                                    pass = dataBase.sqlToString("SELECT Паспорт FROM Сотрудник WHERE email = '" + Tusername.Text + "'");
+                                    Benter.Text = "Выйти";
+                                    Benter.BackColor = Color.LemonChiffon;
+                                }
+                            }
                         }
                     }
                 }
+            }
+            else
+            {
+                Tusername.Text = "";
+                Tpassword.Text = "";
+                Benter.Text = "Войти";
+                Benter.BackColor = Color.Tan;
             }
         }
     }
