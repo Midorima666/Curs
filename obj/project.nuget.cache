@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "i8XAwjD/EFQbRPhplHT3NiMobWpnx6zgpjxuAMl0VMYuH43L40PYrV8tfQ1JwBu8P8FvJq2zVovwqcCAVGh/dw==",
+  "dgSpecHash": "ikWVa7ASse6H25ymAReasNYMoN9dJjKWA8ziyjukjaODfRQLU5kch7JRYeYOH87siyXax7YGWng7ZKA6mPtqmw==",
   "success": true,
-  "projectFilePath": "D:\\Learning\\Программы\\optbaze\\optbaze.csproj",
+  "projectFilePath": "F:\\Курсовая\\optbaze\\optbaze.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\annas\\.nuget\\packages\\azure.core\\1.6.0\\azure.core.1.6.0.nupkg.sha512",
     "C:\\Users\\annas\\.nuget\\packages\\azure.identity\\1.3.0\\azure.identity.1.3.0.nupkg.sha512",

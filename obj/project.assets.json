@@ -2361,11 +2361,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Learning\\Программы\\optbaze\\optbaze.csproj",
+      "projectUniqueName": "F:\\Курсовая\\optbaze\\optbaze.csproj",
       "projectName": "optbaze",
-      "projectPath": "D:\\Learning\\Программы\\optbaze\\optbaze.csproj",
+      "projectPath": "F:\\Курсовая\\optbaze\\optbaze.csproj",
       "packagesPath": "C:\\Users\\annas\\.nuget\\packages\\",
-      "outputPath": "D:\\Learning\\Программы\\optbaze\\obj\\",
+      "outputPath": "F:\\Курсовая\\optbaze\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\annas\\AppData\\Roaming\\NuGet\\NuGet.Config",
